@@ -2,11 +2,11 @@ class Solution:
     def smallerNumbersThanCurrent(self, nums):
         result = []
 
-        for num in nums:
+        for i in range(len(nums)):
             count = 0
 
-            for other in nums:
-                if other < num:
+            for j in range(len(nums)):
+                if i != j and nums[j] < nums[i]:
                     count += 1
 
             result.append(count)
