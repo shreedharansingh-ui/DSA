@@ -9,5 +9,3 @@ class Solution(object):
             if count == 1:
                 total += nums[i]
         return total
-
-        
