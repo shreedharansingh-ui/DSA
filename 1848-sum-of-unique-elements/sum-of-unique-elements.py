@@ -1,11 +1,17 @@
-class Solution(object):
+class Solution:
     def sumOfUnique(self, nums):
+        freq = {}
+
+        for num in nums:
+            if num in freq:
+                freq[num] += 1
+            else:
+                freq[num] = 1
+
         total = 0
-        for i in range(len(nums)):
-            count = 0
-            for j in range(len(nums)):
-                if nums[i] == nums[j]:
-                    count += 1
-            if count == 1:
-                total += nums[i]
+
+        for num in freq:
+            if freq[num] == 1:
+                total += num
+
         return total
