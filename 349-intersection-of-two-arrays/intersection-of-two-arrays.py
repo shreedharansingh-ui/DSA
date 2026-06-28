@@ -1,8 +1,8 @@
 class Solution:
     def intersection(self, nums1, nums2):
-        ans = []
+        result = []
         for num in nums1:
             if num in nums2:
-                if num not in ans:
-                    ans.append(num)
-        return ans
+                if num not in result:
+                    result.append(num)
+        return result
