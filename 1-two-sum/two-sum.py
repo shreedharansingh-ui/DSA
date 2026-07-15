@@ -3,10 +3,10 @@ class Solution(object):
         hashmap = {}
 
         for i in range(len(nums)):
-            complement = target - nums[i]
+            need = target - nums[i]
 
-            if complement in hashmap:
-                return[hashmap[complement], i]
+            if need in hashmap:
+                return[hashmap[need], i]
 
             hashmap[nums[i]] = i    
         
